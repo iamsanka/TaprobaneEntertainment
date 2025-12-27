@@ -1,0 +1,93 @@
+.about {
+  background: #0b0f19;
+  color: #f1f5f9;
+  padding: 6rem 0;
+}
+
+.about-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* Each block = 2-column grid on desktop */
+.about-block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+/* Flip order visually for middle block */
+.about-block.reverse {
+  direction: rtl;
+}
+
+.about-block.reverse .about-text,
+.about-block.reverse .about-image {
+  direction: ltr;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.about-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* Full-height image column */
+.about-image {
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 380px;
+}
+
+/* Swap these URLs to your actual assets */
+.image-1 {
+  background-image: url("/src/assets/images/abt1.gif");
+}
+
+.image-2 {
+  background-image: url("/src/assets/images/abt2.gif");
+}
+
+.image-3 {
+  background-image: url("/src/assets/images/abt3.gif");
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .about-block,
+  .about-block.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  /* NEW: force consistent order on mobile */
+  .about-text {
+    order: 1;
+  }
+
+  .about-image {
+    order: 2;
+  }
+}
+

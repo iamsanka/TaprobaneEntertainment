@@ -1,0 +1,162 @@
+@use '../../styles/colors' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; // ← ensures full screen width
+  height: 100px;
+  z-index: 1000;
+  background-color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.7rem;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
+
+
+/* LEFT SECTION */
+.nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 80px !important;
+  border-radius: 50%;
+  display: block;
+}
+
+
+/* CENTER SECTION */
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 0;
+  padding-right: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+  overflow: auto;
+
+  li a { 
+    padding: 0.5rem 1rem; 
+    border-radius: 8px; 
+    transition: background 0.3s ease; 
+    &:hover { 
+      background: rgba(255, 255, 255, 0.08); 
+    } 
+  }
+}
+
+/* RIGHT SECTION */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-button {
+  background-color: $color-black;
+  color: white;
+  border: 2px solid $color-electric-blue;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $color-electric-blue;
+    color: $color-black;
+  }
+}
+
+/**Burger Menu**/
+/* Hide burger on desktop */
+.burger {
+  display: none;
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-center {
+    display: none; // hide desktop links
+  }
+
+  .burger {
+    position: absolute; // ← ensures it floats independently
+    top: 30px;           // ← vertically aligned inside navbar
+    right: 50px;         // ← pulls it away from the edge
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 2000;
+
+    span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    &.open span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+    &.open span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+
+
+  .mobile-menu {
+    position: fixed;
+    top: 100px; // below navbar
+    left: 0;
+    width: 100%;
+    background: $color-black;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 1.5rem;
+    align-items: center;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease;
+    z-index: 1500;
+
+    a {
+      color: $color-entertainment-blue;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+
+    &.show {
+      transform: translateY(0);
+    }
+  }
+}
