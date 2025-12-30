@@ -28,6 +28,19 @@ const Events: React.FC = () => {
 
               <p className="event-description">{event.description}</p>
 
+              {event.video && (
+                <div className="event-video-wrapper">
+                  <iframe
+                    className="event-video"
+                    src={event.video}
+                    title={event.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              )}
+
               <button className="event-btn">Learn More</button>
             </div>
           ))}

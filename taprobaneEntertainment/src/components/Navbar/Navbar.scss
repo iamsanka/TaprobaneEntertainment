@@ -43,11 +43,11 @@
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   align-items: center;
   list-style: none;
-  overflow: auto;
+  overflow: hidden;
 
   li a { 
     padding: 0.5rem 1rem; 

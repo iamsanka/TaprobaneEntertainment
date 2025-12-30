@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="social-box">
-              <h3>Socials</h3>
+              <h3>Social Media:</h3>
               <a
                 href="https://www.facebook.com/TaprobaneEu"
                 target="_blank"

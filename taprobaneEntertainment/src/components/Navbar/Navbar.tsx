@@ -44,9 +44,6 @@ const Navbar: React.FC = () => {
         <a href="#Home" onClick={() => setMenuOpen(false)}>
           Home
         </a>
-        <a href="#Events" onClick={() => setMenuOpen(false)}>
-          Events
-        </a>
         <a href="#aboutus" onClick={() => setMenuOpen(false)}>
           About Us
         </a>
