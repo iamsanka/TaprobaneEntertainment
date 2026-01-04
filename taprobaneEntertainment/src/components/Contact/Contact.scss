@@ -8,11 +8,13 @@
   .contact-inner {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    padding: 0 2rem;
+    gap: 2rem;
+    padding: 0 0.9rem;
+    overflow-x: hidden;
 
     @media (min-width: 768px) {
       padding: 0 4rem;
+      gap: 4rem;
     }
 
     @media (min-width: 1280px) {
@@ -20,11 +22,10 @@
     }
   }
 
-  /* FIXED GRID — both sides now stretch equally */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
@@ -36,12 +37,11 @@
     }
   }
 
-  /* FIX — remove max-width so both sides fill space */
   .contact-info,
   .contact-form {
     width: 100%;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 1 1.5rem;
 
     @media (min-width: 768px) {
       padding: 0;
@@ -54,7 +54,12 @@
     gap: 1.5rem;
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+
       margin-bottom: 1rem;
       background: linear-gradient(135deg, #38bdf8, #818cf8);
       background-clip: text;
@@ -113,11 +118,12 @@
   .social-links {
     display: flex;
     align-items: center;
-    gap: 8px; /* spacing between items */
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .social-links a {
-    color: #fff; /* or your preferred color */
+    color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -125,19 +131,18 @@
   }
 
   .separator {
-    color: #aaa; /* muted separator color */
+    color: #aaa;
   }
 
-
-  /* FIX — form box no longer shrinks on mobile */
   .contact-form {
-    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.03);
-    padding: 50px; /* smaller on mobile */
+    padding: 30px;
 
     @media (min-width: 768px) {
-      padding: 30px; /* normal on desktop */
+      padding: 50px;
     }
 
     border-radius: 12px;
@@ -150,7 +155,12 @@
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+
       margin-bottom: 1rem;
       background: linear-gradient(135deg, #818cf8, #38bdf8);
       background-clip: text;
