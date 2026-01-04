@@ -110,6 +110,25 @@
     }
   }
 
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* spacing between items */
+  }
+
+  .social-links a {
+    color: #fff; /* or your preferred color */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .separator {
+    color: #aaa; /* muted separator color */
+  }
+
+
   /* FIX — form box no longer shrinks on mobile */
   .contact-form {
     width: 100%;

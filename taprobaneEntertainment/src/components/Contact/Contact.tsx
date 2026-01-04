@@ -44,11 +44,19 @@ const Contact: React.FC = () => {
                 <strong>Phone:</strong>
                 <br />
                 <a
-                  href="https://wa.me/358413275060"
+                  href="https://wa.me/358442363616"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +358 413 275 060
+                  +358 442363616
+                </a>
+                <br />
+                <a
+                  href="https://wa.me/358442363618"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +358 442363618
                 </a>
               </p>
             </div>
@@ -62,14 +70,32 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="social-box">
-              <h3>Social Media:</h3>
-              <a
-                href="https://www.facebook.com/TaprobaneEu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </a>
+              <h3>Follow us on Social Media:</h3>
+              <div className="social-links">
+                <a
+                  href="https://www.facebook.com/TaprobaneEu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-facebook-f"></i> Facebook
+                </a>
+                <span className="separator"> | </span>
+                <a
+                  href="https://www.instagram.com/taprobane_fi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram"></i> Instagram
+                </a>
+                <span className="separator"> | </span>
+                <a
+                  href="https://whatsapp.com/channel/0029VbBM2yA1SWt8Adm69I1A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-whatsapp"></i> Whatsapp Channel
+                </a>
+              </div>
             </div>
           </div>
 
