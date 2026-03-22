@@ -26,6 +26,20 @@ const Events: React.FC = () => {
                 <p>{event.location}</p>
               </div>
 
+              {/* MULTIPLE IMAGES */}
+              {event.images && (
+                <div className="event-image-gallery">
+                  {event.images.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`${event.title} image ${index + 1}`}
+                      className="event-image"
+                    />
+                  ))}
+                </div>
+              )}
+
               <p className="event-description">{event.description}</p>
 
               {event.video && (
@@ -41,7 +55,14 @@ const Events: React.FC = () => {
                 </div>
               )}
 
-              <button className="event-btn">Learn More</button>
+              <a
+                className="event-btn"
+                href="https://tickets-taprobane.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy Tickets
+              </a>
             </div>
           ))}
         </div>

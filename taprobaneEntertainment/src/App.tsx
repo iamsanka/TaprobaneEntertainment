@@ -28,7 +28,7 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <Hero />
-      {/* <Events /> */}
+      <Events />
       <AboutUs />
       <Contact />
     </>

@@ -6,7 +6,7 @@
   .events-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; // adds breathing room from page edges
+    padding: 0 2rem;
   }
 
   .events-header {
@@ -30,7 +30,7 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
-    padding: 0 1rem; // ensures grid doesn't touch screen edges
+    padding: 0 1rem;
   }
 
   .event-card {
@@ -71,6 +71,30 @@
       line-height: 1.6;
     }
 
+    /* -----------------------------
+       MULTIPLE IMAGE GALLERY
+    ------------------------------ */
+    .event-image-gallery {
+      display: flex;
+      justify-content: center;   /* centers the whole row */
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+
+    .event-image {
+      width: 100%;
+      max-width: 500px;          /* reduces size */
+      border-radius: 8px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;            /* centers each image */
+    }
+
+    /* -----------------------------
+       VIDEO
+    ------------------------------ */
     .event-video-wrapper {
       position: relative;
       padding-top: 56.25%;
@@ -87,6 +111,9 @@
       }
     }
 
+    /* -----------------------------
+       BUTTON
+    ------------------------------ */
     .event-btn {
       align-self: flex-start;
       padding: 0.75rem 1.5rem;
@@ -125,5 +152,38 @@
     .event-card {
       padding: 1.5rem;
     }
+
+    .event-image {
+      max-width: 100%; /* full width on mobile */
+    }
   }
+}
+
+/* -----------------------------
+   GLOBAL BUTTON STYLE
+------------------------------ */
+.event-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff4d4d;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: all 0.25s ease;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.event-btn:hover {
+  background: #e63e3e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.event-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
